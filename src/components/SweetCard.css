@@ -1,0 +1,164 @@
+.sweet-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.sweet-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.sweet-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sweet-card.out-of-stock {
+  opacity: 0.7;
+}
+
+.sweet-card-header {
+  margin-bottom: 15px;
+}
+
+.sweet-card-header h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.sweet-category {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sweet-card-body {
+  margin-bottom: 20px;
+}
+
+.sweet-price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.sweet-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.sweet-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.purchase-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.purchase-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button,
+.restock-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button {
+  background: #4caf50;
+  color: white;
+}
+
+.edit-button:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.restock-button {
+  background: #ff9800;
+  color: white;
+}
+
+.restock-button:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+}
+
+.out-of-stock-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #f44336;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
