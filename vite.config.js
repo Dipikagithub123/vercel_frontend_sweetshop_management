@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'https://web-production-80c12.up.railway.app/',
+        target: 'https://vercel-backend-sweet-management.vercel.app',
         changeOrigin: true,
       },
     },
